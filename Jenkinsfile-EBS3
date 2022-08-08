@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        AWS_ACCESS_KEY_ID     = credentials('Najwa-aws-secret-key-id')
-        AWS_SECRET_ACCESS_KEY = credentials('Najwa-aws-secret-access-key)
+        AWS_ACCESS_KEY_ID     = credentials('NajwaN-aws-secret-key-id')
+        AWS_SECRET_ACCESS_KEY = credentials('NajwaN-aws-secret-access-key')
         ARTIFACT_NAME = 'Najwa-Belt2D2-artifacts-123456.jar'
         AWS_S3_BUCKET = 'najwabelt2d2artifacts123456'
         //AWS_EB_APP_NAME = 'Najwa_App2'
