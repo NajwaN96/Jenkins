@@ -5,8 +5,8 @@ pipeline {
         AWS_SECRET_ACCESS_KEY = credentials('Najwa-aws-secret-access-key')
         ARTIFACT_NAME = 'Najwa-Belt2D2-artifacts-123456.jar'
         AWS_S3_BUCKET = 'najwabelt2d2artifacts123456'
-        AWS_EB_APP_NAME = 'NajwaEBapplication'
-        AWS_EB_ENVIRONMENT = 'Najwaebapplication-env-1'
+        AWS_EB_APP_NAME = 'Najwa_App2'
+        AWS_EB_ENVIRONMENT = 'Najwaapp2-env'
         AWS_EB_APP_VERSION = "${BUILD_ID}"
     } 
     stages {
