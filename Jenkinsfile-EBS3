@@ -5,7 +5,7 @@ pipeline {
         AWS_SECRET_ACCESS_KEY = credentials('Najwa-aws-secret-access-key)
         ARTIFACT_NAME = 'Najwa-Belt2D2-artifacts-123456.jar'
         AWS_S3_BUCKET = 'najwabelt2d2artifacts123456'
-        AWS_EB_APP_NAME = 'Najwa_App2'
+        //AWS_EB_APP_NAME = 'Najwa_App2'
         AWS_EB_ENVIRONMENT = 'Najwaapp2-env'
         AWS_EB_APP_VERSION = "${BUILD_ID}"
     } 
@@ -70,9 +70,9 @@ pipeline {
         stage('Deploy') {
             steps {
 
-                sh 'aws elasticbeanstalk create-application-version --application-name $AWS_EB_APP_NAME --version-label $AWS_EB_APP_VERSION --source-bundle S3Bucket=$AWS_S3_BUCKET,S3Key=$ARTIFACT_NAME'
+                sh 'aws elasticbeanstalk create-application-version --application-name "Najwa_App2" --version-label $AWS_EB_APP_VERSION --source-bundle S3Bucket=$AWS_S3_BUCKET,S3Key=$ARTIFACT_NAME'
 
-                sh 'aws elasticbeanstalk update-environment --application-name $AWS_EB_APP_NAME --environment-name $AWS_EB_ENVIRONMENT --version-label $AWS_EB_APP_VERSION'
+                sh 'aws elasticbeanstalk update-environment --application-name "Najwa_App2" --environment-name $AWS_EB_ENVIRONMENT --version-label $AWS_EB_APP_VERSION'
             }
         }
     }
